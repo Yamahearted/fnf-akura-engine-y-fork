@@ -111,10 +111,10 @@ text = "Icon:"
 valign = 1
 
 [node name="HpColor" type="ColorPickerButton" parent="UI/Tabs/Actor"]
-margin_left = 97.0
-margin_top = 232.0
-margin_right = 169.0
-margin_bottom = 256.0
+margin_left = 96.0
+margin_top = 264.0
+margin_right = 168.0
+margin_bottom = 288.0
 flat = true
 color = Color( 1, 1, 1, 1 )
 edit_alpha = false
@@ -138,6 +138,21 @@ margin_left = -93.0
 margin_right = -14.0
 margin_bottom = 24.0
 text = "Sing length:"
+valign = 1
+
+[node name="Scale" type="SpinBox" parent="UI/Tabs/Actor"]
+margin_left = 103.0
+margin_top = 234.0
+margin_right = 177.0
+margin_bottom = 258.0
+value = 1.0
+allow_greater = true
+
+[node name="Label" type="Label" parent="UI/Tabs/Actor/Scale"]
+margin_left = -93.0
+margin_right = -14.0
+margin_bottom = 24.0
+text = "Scale:"
 valign = 1
 
 [node name="Flip" type="CheckBox" parent="UI/Tabs/Actor"]
@@ -309,6 +324,7 @@ script = ExtResource( 2 )
 [connection signal="pressed" from="UI/Tabs/Actor/ImportImageAtlas" to="." method="import_imageatlas"]
 [connection signal="text_changed" from="UI/Tabs/Actor/IconName" to="." method="on_iconname_changed"]
 [connection signal="color_changed" from="UI/Tabs/Actor/HpColor" to="." method="on_hpcolor_changed"]
+[connection signal="value_changed" from="UI/Tabs/Actor/Scale" to="." method="on_scale_changed"]
 [connection signal="pressed" from="UI/Tabs/Animations/Create" to="." method="create_animation"]
 [connection signal="pressed" from="UI/Tabs/Animations/Prev" to="." method="play_actor_previous_animation"]
 [connection signal="pressed" from="UI/Tabs/Animations/Next" to="." method="play_actor_next_animation"]

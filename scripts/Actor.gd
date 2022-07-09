@@ -32,6 +32,7 @@ func set_actor(actor_name="bf"):
 		hp_color=Color(data.hp_color)
 		sing_len=data.sing_len
 		camera_offset=Vector2(data.camera_offset.x,data.camera_offset.y)
+		scale=Vector2(data.scale,data.scale) if data.has("scale") else Vector2(1,1)
 		if data.flip:
 			flip()
 		

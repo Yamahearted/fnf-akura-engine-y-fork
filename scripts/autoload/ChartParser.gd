@@ -1,9 +1,9 @@
 extends Node
 
-var chart={}
+var chart:Dictionary={}
 
 func _ready():
-	if true:
+	if OS.has_feature("editor"):
 		get_tree().connect("files_dropped",self,"parse_chart")
 
 func parse_chart(files,screen):
@@ -19,8 +19,7 @@ func parse_chart(files,screen):
 		"sections":[],
 		"bf":"bf",
 		"gf":"gf",
-		"dad":"dad",
-		"arrows_count":4
+		"dad":"dad"
 	}
 	
 	if str(files[0]).ends_with(".json"):

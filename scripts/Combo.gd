@@ -14,16 +14,13 @@ onready var numbers=$"Numbers"
 onready var ms_label=$"MsLabel"
 
 func on_ready():
-	if Globals.ui_skin=="base":
-		scale_to=scale
-		numbers.position.y=105
-		numbers_offset=104
-	else:
-		scale_to=Vector2(1,1)*4
-		numbers.position.y=24*4
-		numbers_offset=8
-	
-	ms_label.rect_position.y=160
+	match Globals.ui_skin:
+		"pixel":
+			numbers.position.y=24*4
+			numbers_offset=8
+		_:
+			numbers.position.y=105
+			numbers_offset=90
 	ms_label.rect_position.y=120
 	
 func _physics_process(delta):
@@ -51,11 +48,11 @@ func spawn(missed:bool=false):
 		nmb.hide()
 	
 	rating.scale=Vector2(8,8) if Globals.ui_skin=="pixel" else Vector2(1,1)
-	numbers.scale=Vector2(6,6) if Globals.ui_skin=="pixel" else Vector2(1,1)
+	numbers.scale=Vector2(6,6) if Globals.ui_skin=="pixel" else Vector2(0.7,0.77)
 	
 	rating.position=Vector2()
-	rating.grav=0.12 if !Globals.ui_skin=="pixel" else 0.03
-	rating.jump_height=rand_range(2,4)*(1.0 if !Globals.ui_skin=="pixel" else 0.2)
+	rating.grav=0.12
+	rating.jump_height=rand_range(2,4)
 	rating.velocity.y=-rating.jump_height
 	rating.texture=load("res://assets/images/ui-skins/"+Globals.ui_skin+"/"+Status.rating+".png")
 	rating.set_physics_process(true)

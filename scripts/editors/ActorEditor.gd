@@ -15,7 +15,8 @@ onready var menu={
 		"hp_color":get_node("UI/Tabs/Actor/HpColor"),
 		"sing_len":get_node("UI/Tabs/Actor/SingLen"),
 		"flip":get_node("UI/Tabs/Actor/Flip"),
-		"autoplay_name":get_node("UI/Tabs/Actor/AutoplayName")
+		"autoplay_name":get_node("UI/Tabs/Actor/AutoplayName"),
+		"scale":get_node("UI/Tabs/Actor/Scale")
 	},
 	"animations":{
 		"name":get_node("UI/Tabs/Animations/Name"),
@@ -48,7 +49,7 @@ func _input(event):
 			world.position+=event.relative
 		
 		if Input.is_action_pressed("mb_left") and Input.is_action_pressed("ui_ctrl"):
-			actor.add_offset(actor.animation,event.relative.x*(1.0/world.scale.x),event.relative.y*(1.0/world.scale.y))
+			actor.add_offset(actor.animation,event.relative.x*(1.0/world.scale.x)/actor.scale.x,event.relative.y*(1.0/world.scale.y)/actor.scale.y)
 		
 		if Input.is_action_pressed("mb_right") and Input.is_action_pressed("ui_ctrl"):
 			camera_offset.x+=event.relative.x*(1.0/world.scale.x)
@@ -86,7 +87,7 @@ func _process(delta):
 	
 	if actor.flip_x!=menu.actor.flip.pressed:
 		actor.flip_x=menu.actor.flip.pressed
-		actor.scale.x*=-1.0
+		actor.scale.x=menu.actor.scale.value*(1.0 if not menu.actor.flip.pressed else -1.0)
 	
 	ghost.scale=actor.scale
 	
@@ -155,7 +156,8 @@ func save_actor():
 		"imageatlas":menu.actor.imageatlas_name.text,
 		"hp_color":menu.actor.hp_color.color.to_html(false),
 		"animations":anims_to_save,
-		"camera_offset":camera_offset
+		"camera_offset":camera_offset,
+		"scale":menu.actor.scale.value
 	}
 	f.open("res://assets/actors/"+menu.actor.name.text+".json",File.WRITE)
 	f.store_string(to_json(data))
@@ -178,6 +180,7 @@ func load_actor():
 	menu.actor.autoplay_name.text=data.autoplay
 	menu.actor.imageatlas_name.text=data.imageatlas
 	menu.actor.hp_color.color=Color(data.hp_color)
+	menu.actor.scale.value=data.scale if data.has("scale") else 1
 	camera_offset=data.camera_offset
 	
 	import_imageatlas()
@@ -276,3 +279,6 @@ func on_iconname_changed(icon_name):
 func on_hpcolor_changed(color):
 	hpbar.modulate=color
 
+func on_scale_changed(value):
+	actor.scale=Vector2(value,value)
+	actor.scale.x=value*(1.0 if not menu.actor.flip.pressed else -1.0)

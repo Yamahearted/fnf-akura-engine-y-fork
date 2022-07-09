@@ -1,0 +1,24 @@
+{
+    "title":"Hating simulator",
+    "logo":"6",
+    "bg":"",
+    "name":"week6",
+    "storymode_color":"f9cf51",
+    "hide_from_story_mode":false,
+    "songs":[
+        {
+            "name":"senpai",
+            "icon":"senpai-pixel",
+            "color":"ed9e69",
+            "show_on_storymode":true
+        }
+    ],
+    "actors":[
+        ["",420,410,1,0.48,false],
+        ["gf",650,420,0,0.5,false],
+        ["bf",860,410,1,0.55,false]
+    ],
+    "difficulties":[
+        "easy"
+    ] 
+}   

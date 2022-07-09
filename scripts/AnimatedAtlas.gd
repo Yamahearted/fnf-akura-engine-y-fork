@@ -55,10 +55,10 @@ func add_animation(anim_name:String,prefix:String,framerate:int=24,loop:bool=fal
 		animations[anim_name]["index"]=0
 		animations[anim_name]["max_frames"]=0
 		animations[anim_name]["loop"]=loop
-		animations[anim_name]["framerate"]=framerate*2
+		animations[anim_name]["framerate"]=framerate
 		animations[anim_name]["offset"]=Vector2(offset_x,offset_y)
 		animations[anim_name]["frames"]=[]
-		animations[anim_name]["speed"]=((framerate*2)/60.0)
+		animations[anim_name]["speed"]=((framerate)/30.0)
 		animations[anim_name]["play_next"]=play_next
 		animations[anim_name]["reset_at_beat"]=reset_at_beat
 		

@@ -18,6 +18,7 @@ onready var ui=$"UI"
 onready var inst=$"Inst"
 onready var voices=$"Voices"
 onready var pause_menu=$"PauseMenu"
+onready var aspect_ratio_bars=$"AspectRatio/Bars"
 
 func _ready():
 	add_child(tween)
@@ -40,9 +41,17 @@ func _ready():
 	Globals.ui_skin=chart.ui_skin
 	Globals.timescale=1000*chart.speed
 	
+	match Globals.ui_skin:
+		"pixel":
+			aspect_ratio_bars.show()
+		_:
+			aspect_ratio_bars.hide()
+	
 	Ref.countdown=$"UI/Countdown"
 	Ref.countdown.connect("countdown_finished",self,"countdown_finished")
 	Ref.countdown.call("on_ready")
+	
+	Ref.camera=$"Camera"
 	
 	if len(chart.stage)>0:
 		var stage_path="res://scenes/stages/"+chart.stage+".tscn"
@@ -61,8 +70,7 @@ func _ready():
 	Ref.combo=$"UI/Combo"
 	Ref.combo.call("on_ready")
 	
-	Ref.camera=$"Camera"
-	Ref.camera.zoom_to*=1.1
+	#Ref.camera.zoom_to*=1.1
 
 	Ref.strums.clear()
 	Ref.strums.append($"UI/Strums/0")
@@ -145,17 +153,24 @@ func _ready():
 		Ref.strums[1].modulate.a*=0.7
 		
 		if Settings.down_scroll:
-			Ref.combo.position.x=460
-			Ref.combo.position.y=-250
+			Ref.combo.position.x=350
+			Ref.combo.position.y=-100
 		else:
-			Ref.combo.position.x=460
-			Ref.combo.position.y=250
-
+			Ref.combo.position.x=-350
+			Ref.combo.position.y=100
+		
 		for i in Ref.strums[1].get_arrows().size():
 			var arrow=Ref.strums[1].get_arrows()[i]
 			if i>1:
-				arrow.position.x+=960
+				arrow.position.x+=960-(240 if Globals.ui_skin=="pixel" else 0)
 	
+	if Globals.ui_skin=="pixel":
+		if not Settings.middle_scroll:
+			Ref.strums[1].position.x+=80
+			Ref.strums[0].position.x-=80
+		else:
+			Ref.strums[1].position.x+=90
+		
 	if Settings.hide_ui:
 		Ref.combo.hide()
 		Ref.health_bar.hide()
@@ -362,18 +377,19 @@ func _physics_process(_delta):
 		if Ref.camera.target.get_class() in ["Actor","AnimatedAtlas"]:
 			Ref.camera.offset_to=Ref.camera.target.camera_offset
 			if Settings.move_camera_with_actor:
+				var dist=5 if not Globals.ui_skin=="pixel" else 2
 				match Ref.camera.target.animation:
 					"sing-left":
-						Ref.camera.offset_to+=Vector2(-5,0)
+						Ref.camera.offset_to+=Vector2(-dist,0)
 					"sing-right":
-						Ref.camera.offset_to+=Vector2(5,0)
+						Ref.camera.offset_to+=Vector2(dist,0)
 					"sing-down":
-						Ref.camera.offset_to+=Vector2(0,5)
+						Ref.camera.offset_to+=Vector2(0,dist)
 					"sing-up":
-						Ref.camera.offset_to+=Vector2(0,-5)
+						Ref.camera.offset_to+=Vector2(0,-dist)
 					_:
 						Ref.camera.offset_to+=Vector2()
-	
+
 	if Input.is_action_just_pressed("ui_reset") and not Settings.disable_blueballed_button:
 		Status.subtract_hp(10000000)
 	

@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "SongScript",
 "language": "GDScript",
 "path": "res://scripts/Song.gd"
+}, {
+"base": "ParallaxBackground",
+"class": "Stage",
+"language": "GDScript",
+"path": "res://scripts/stages/Stage.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
 "AnimatedAtlas": "",
 "SongEvent": "",
-"SongScript": ""
+"SongScript": "",
+"Stage": ""
 }
 
 [application]

@@ -37,9 +37,26 @@ position = Vector2( -206, 323 )
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]
 layer = 2
 
+[node name="AspectRatio" type="CanvasLayer" parent="."]
+
+[node name="Bars" type="Node2D" parent="AspectRatio"]
+
+[node name="Left" type="ColorRect" parent="AspectRatio/Bars"]
+margin_right = 160.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Right" type="ColorRect" parent="AspectRatio/Bars"]
+margin_left = 1120.0
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+
 [node name="Inst" type="AudioStreamPlayer" parent="."]
 
 [node name="Voices" type="AudioStreamPlayer" parent="."]
 
 [node name="Camera" parent="." instance=ExtResource( 11 )]
 position = Vector2( 640, 360 )
+
+[editable path="PauseMenu"]

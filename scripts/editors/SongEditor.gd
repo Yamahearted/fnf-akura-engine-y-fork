@@ -152,7 +152,7 @@ func _ready():
 		
 	load_song()
 
-	camera.offset.x=-1280/2+(chart.arrows_count*2*GRID_SIZE)/2
+	camera.offset.x=-1280/2+(4*2*GRID_SIZE)/2
 	camera.use_tween=false
 
 	note_atlas.set_imageatlas("note-skins/"+Settings.note_skin+"/"+Globals.ui_skin+"/notes")
@@ -285,10 +285,10 @@ func _process(_delta):
 	chart.ui_skin=tabs.song.ui_skin.text
 	
 	icon_dad.texture=Globals.get_actor_icon(tabs.song.dad.text)
-	icon_dad.position.x=((chart.arrows_count*2*GRID_SIZE)/2)+chart.arrows_count/2*GRID_SIZE if chart.sections[cur_section].must_hit else chart.arrows_count/2*GRID_SIZE
+	icon_dad.position.x=((4*2*GRID_SIZE)/2)+4/2*GRID_SIZE if chart.sections[cur_section].must_hit else 4/2*GRID_SIZE
 
 	icon_bf.texture=Globals.get_actor_icon(tabs.song.bf.text)
-	icon_bf.position.x=((chart.arrows_count*2*GRID_SIZE)/2)+chart.arrows_count/2*GRID_SIZE if not chart.sections[cur_section].must_hit else chart.arrows_count/2*GRID_SIZE
+	icon_bf.position.x=((4*2*GRID_SIZE)/2)+4/2*GRID_SIZE if not chart.sections[cur_section].must_hit else 4/2*GRID_SIZE
 	
 	strum_time=fmod(Conductor.time-get_section_start(cur_section),Conductor.step_crochet*chart.sections[cur_section].length_in_steps)
 	strumline_y=get_strum_y(strum_time if auto_scroll else Conductor.time-get_section_start(cur_section))
@@ -299,7 +299,7 @@ func _process(_delta):
 	update()
 	
 func _draw():
-	for x in range(-1,chart.arrows_count*2):
+	for x in range(-1,4*2):
 		for y in (16*4)*get_chart_zoom():
 			var grid_color=[Color("d9d5d5"),Color("e7e6e6")][(x+y)%2]
 			if y+1>chart.sections[cur_section].length_in_steps*get_chart_zoom():
@@ -315,7 +315,7 @@ func _draw():
 		var beatline_y=get_strum_y(Conductor.step_crochet*i*4)
 		draw_line(
 			Vector2(-GRID_SIZE,beatline_y),
-			Vector2(chart.arrows_count*2*GRID_SIZE,beatline_y),
+			Vector2(4*2*GRID_SIZE,beatline_y),
 			Color(Color.crimson.r,Color.crimson.g,Color.crimson.b,0.5),2
 		)
 	
@@ -412,7 +412,7 @@ func _draw():
 		
 	draw_line(
 		Vector2(-GRID_SIZE,strumline_y),
-		Vector2(chart.arrows_count*2*GRID_SIZE,strumline_y),
+		Vector2(4*2*GRID_SIZE,strumline_y),
 		Color.white,4
 	)
 	
@@ -438,7 +438,7 @@ func _draw():
 			)
 	
 	for i in 2:
-		var sep_x=i*(GRID_SIZE*chart.arrows_count)
+		var sep_x=i*(GRID_SIZE*4)
 		draw_line(
 			Vector2(sep_x,0),
 			Vector2(sep_x,(16*GRID_SIZE*4)*get_chart_zoom()),
@@ -608,7 +608,7 @@ func get_section_start(index):
 	return da_pos
 
 func mouse_can_place_notes():
-	return mouse_snap.x/GRID_SIZE>-1 and mouse_snap.x/GRID_SIZE<chart.arrows_count*2 and mouse_snap.y/GRID_SIZE>-1 and mouse_snap.y/GRID_SIZE<16
+	return mouse_snap.x/GRID_SIZE>-1 and mouse_snap.x/GRID_SIZE<4*2 and mouse_snap.y/GRID_SIZE>-1 and mouse_snap.y/GRID_SIZE<16
 
 func mouse_can_place_events():
 	return mouse_snap.x/GRID_SIZE>-2 and mouse_snap.x/GRID_SIZE<0 and mouse_snap.y/GRID_SIZE>-1 and mouse_snap.y/GRID_SIZE<16
@@ -703,17 +703,17 @@ func clear_section():
 func swap_section_notes():
 	var notes:Array=chart.sections[cur_section].notes
 	for i in notes.size():
-		notes[i][1]=int(notes[i][1]+chart.arrows_count)%int(chart.arrows_count*2)
+		notes[i][1]=int(notes[i][1]+4)%int(4*2)
 	cur_note=-1
 	
 func duet_section_notes():
 	var duet_notes:Array=[]
 	for note in chart.sections[cur_section].notes:
 		var fixed_column:int=note[1]
-		if (fixed_column>chart.arrows_count-1):
-			fixed_column-=chart.arrows_count
+		if (fixed_column>4-1):
+			fixed_column-=4
 		else:
-			fixed_column+=chart.arrows_count
+			fixed_column+=4
 
 		var copied_note:Array=[note[0],fixed_column,note[2],note[3]]
 		duet_notes.append(copied_note)
@@ -724,9 +724,9 @@ func duet_section_notes():
 	
 func mirror_section_notes():
 	for note in chart.sections[cur_section].notes:
-		var fixed_column:int=(int(chart.arrows_count)-1)-(int(note[1])%int(chart.arrows_count))
-		if note[1]>=chart.arrows_count:
-			fixed_column+=chart.arrows_count;
+		var fixed_column:int=(int(4)-1)-(int(note[1])%int(4))
+		if note[1]>=4:
+			fixed_column+=4;
 		note[1]=fixed_column;
 	cur_note=-1
 

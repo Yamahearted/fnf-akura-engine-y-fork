@@ -34,7 +34,9 @@ func _ready():
 	add_option("Middle-scroll","","middle_scroll")
 	add_option("Ghost-tapping","You won't take any damage if any key pressed and there's no notes in range","ghost_tapping")
 	add_option("Disable blueballed button","","disable_blueballed_button")
+	add_option("Move camera with sing animation","","move_camera_with_actor")
 	add_option("Ms-offset","","ms_offset","spinbox",[0,500])
+	
 	
 	add_section("Graphics")
 	add_option("Low Quality","Recommended to keep it low for lowendpcs.","low_quality")
