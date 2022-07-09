@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="checkbox.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="back to idle instance 10000" x="0" y="0" width="140" height="332" frameX="-12" frameY="0" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10001" x="0" y="0" width="140" height="332" frameX="-12" frameY="0" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10002" x="140" y="0" width="163" height="287" frameX="0" frameY="-22" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10003" x="140" y="0" width="163" height="287" frameX="0" frameY="-22" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10004" x="303" y="0" width="146" height="314" frameX="-9" frameY="-8" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10005" x="303" y="0" width="146" height="314" frameX="-9" frameY="-8" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10006" x="449" y="0" width="154" height="296" frameX="-5" frameY="-18" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10007" x="449" y="0" width="154" height="296" frameX="-5" frameY="-18" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10008" x="603" y="0" width="151" height="301" frameX="-6" frameY="-15" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10009" x="603" y="0" width="151" height="301" frameX="-6" frameY="-15" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="back to idle instance 10010" x="603" y="0" width="151" height="301" frameX="-6" frameY="-15" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="confirm instance 10000" x="603" y="0" width="151" height="301" frameX="-11" frameY="-26" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="confirm instance 10001" x="603" y="0" width="151" height="301" frameX="-11" frameY="-26" frameWidth="163" frameHeight="332"/>
+	<SubTexture name="confirm instance 10002" x="754" y="0" width="150" height="347" frameX="-8" frameY="0" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10003" x="754" y="0" width="150" height="347" frameX="-8" frameY="0" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10004" x="0" y="347" width="154" height="258" frameX="0" frameY="-45" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10005" x="0" y="347" width="154" height="258" frameX="0" frameY="-45" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10006" x="154" y="347" width="150" height="300" frameX="-3" frameY="-22" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10007" x="154" y="347" width="150" height="300" frameX="-3" frameY="-22" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10008" x="304" y="347" width="154" height="291" frameX="-4" frameY="-25" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10009" x="304" y="347" width="154" height="291" frameX="-4" frameY="-25" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10010" x="458" y="347" width="150" height="300" frameX="-6" frameY="-20" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10011" x="458" y="347" width="150" height="300" frameX="-6" frameY="-20" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10012" x="458" y="347" width="150" height="300" frameX="-6" frameY="-20" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10013" x="458" y="347" width="150" height="300" frameX="-6" frameY="-20" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10014" x="458" y="347" width="150" height="300" frameX="-6" frameY="-20" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10015" x="458" y="347" width="150" height="300" frameX="-6" frameY="-20" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="confirm instance 10016" x="458" y="347" width="150" height="300" frameX="-6" frameY="-20" frameWidth="161" frameHeight="347"/>
+	<SubTexture name="idle instance 10000" x="603" y="0" width="151" height="301" frameX="0" frameY="0" frameWidth="163" frameHeight="332"/>
+</TextureAtlas>

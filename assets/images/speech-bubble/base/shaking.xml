@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="shaking.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="AHH speech bubble instance 10000" x="0" y="0" width="1232" height="409" frameX="-9" frameY="-5" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="AHH speech bubble instance 10001" x="1232" y="0" width="1229" height="422" frameX="-9" frameY="0" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="AHH speech bubble instance 10002" x="0" y="422" width="1242" height="394" frameX="0" frameY="-15" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="AHH speech bubble instance 10003" x="1232" y="0" width="1229" height="422" frameX="-9" frameY="0" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="AHH speech bubble instance 10004" x="0" y="0" width="1232" height="409" frameX="-9" frameY="-5" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="AHH speech bubble instance 10005" x="0" y="422" width="1242" height="394" frameX="0" frameY="-15" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="AHH speech bubble instance 10006" x="1232" y="0" width="1229" height="422" frameX="-9" frameY="0" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="AHH speech bubble instance 10007" x="0" y="422" width="1242" height="394" frameX="0" frameY="-15" frameWidth="1242" frameHeight="422"/>
+	<SubTexture name="speech bubble loud open instance 10000" x="1242" y="422" width="172" height="84" frameX="-894" frameY="-182" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10001" x="1414" y="422" width="335" height="296" frameX="-744" frameY="-134" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10002" x="1749" y="422" width="1318" height="536" frameX="-16" frameY="0" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10003" x="1749" y="422" width="1318" height="536" frameX="-16" frameY="0" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10004" x="0" y="958" width="1349" height="449" frameX="0" frameY="-48" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10005" x="0" y="958" width="1349" height="449" frameX="0" frameY="-48" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10006" x="1349" y="958" width="1299" height="492" frameX="-25" frameY="-30" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10007" x="0" y="1450" width="1265" height="476" frameX="-42" frameY="-39" frameWidth="1349" frameHeight="536"/>
+	<SubTexture name="speech bubble loud open instance 10008" x="1265" y="1450" width="1284" height="479" frameX="-33" frameY="-36" frameWidth="1349" frameHeight="536"/>
+</TextureAtlas>

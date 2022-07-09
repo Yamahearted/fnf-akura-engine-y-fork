@@ -1,0 +1,523 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/editors/SongEditor.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/fonts/vcr.tres" type="DynamicFont" id=5]
+
+[node name="SongEditor" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Tabs" type="TabContainer" parent="UI"]
+margin_left = 883.0
+margin_top = 121.0
+margin_right = 1239.0
+margin_bottom = 554.0
+tab_align = 2
+
+[node name="Song" type="Tabs" parent="UI/Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Name" type="OptionButton" parent="UI/Tabs/Song"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 212.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Difficulty" type="OptionButton" parent="UI/Tabs/Song"]
+margin_left = 221.0
+margin_top = 8.0
+margin_right = 331.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Save" type="Button" parent="UI/Tabs/Song"]
+margin_left = 221.0
+margin_top = 35.0
+margin_right = 331.0
+margin_bottom = 55.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Save"
+
+[node name="Load" type="Button" parent="UI/Tabs/Song"]
+margin_left = 221.0
+margin_top = 61.0
+margin_right = 331.0
+margin_bottom = 81.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Load"
+
+[node name="Boyfriend" type="OptionButton" parent="UI/Tabs/Song"]
+margin_left = 6.0
+margin_top = 197.0
+margin_right = 114.0
+margin_bottom = 221.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="UI/Tabs/Song/Boyfriend"]
+margin_top = -27.0
+margin_right = 53.0
+margin_bottom = -3.0
+text = "Boyfriend:"
+valign = 1
+
+[node name="Girlfriend" type="OptionButton" parent="UI/Tabs/Song"]
+margin_left = 119.0
+margin_top = 197.0
+margin_right = 226.0
+margin_bottom = 221.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Label2" type="Label" parent="UI/Tabs/Song/Girlfriend"]
+margin_left = 113.0
+margin_top = -26.0
+margin_right = 166.0
+margin_bottom = -2.0
+text = "Dad:"
+valign = 1
+
+[node name="Dad" type="OptionButton" parent="UI/Tabs/Song"]
+margin_left = 232.0
+margin_top = 198.0
+margin_right = 342.0
+margin_bottom = 222.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="UI/Tabs/Song/Dad"]
+margin_left = -113.0
+margin_top = -28.0
+margin_right = -49.0
+margin_bottom = -4.0
+text = "Girlfriend:"
+valign = 1
+
+[node name="Stage" type="OptionButton" parent="UI/Tabs/Song"]
+margin_left = 182.0
+margin_top = 263.0
+margin_right = 340.0
+margin_bottom = 283.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="UI/Tabs/Song/Stage"]
+margin_top = -27.0
+margin_right = 53.0
+margin_bottom = -3.0
+text = "Stage:"
+valign = 1
+
+[node name="UISkin" type="OptionButton" parent="UI/Tabs/Song"]
+margin_left = 6.0
+margin_top = 263.0
+margin_right = 174.0
+margin_bottom = 283.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="UI/Tabs/Song/UISkin"]
+margin_top = -27.0
+margin_right = 53.0
+margin_bottom = -3.0
+text = "UI-skin:"
+valign = 1
+
+[node name="Bpm" type="SpinBox" parent="UI/Tabs/Song"]
+margin_left = 63.0
+margin_top = 49.0
+margin_right = 161.0
+margin_bottom = 73.0
+min_value = 1.0
+value = 100.0
+allow_greater = true
+
+[node name="Label" type="Label" parent="UI/Tabs/Song/Bpm"]
+margin_left = -53.0
+margin_bottom = 24.0
+text = "Bpm:"
+valign = 1
+
+[node name="Speed" type="SpinBox" parent="UI/Tabs/Song"]
+margin_left = 63.0
+margin_top = 80.0
+margin_right = 161.0
+margin_bottom = 104.0
+min_value = 0.05
+step = 0.01
+value = 1.0
+allow_greater = true
+
+[node name="Label" type="Label" parent="UI/Tabs/Song/Speed"]
+margin_left = -53.0
+margin_bottom = 24.0
+text = "Speed:"
+valign = 1
+
+[node name="Section" type="Tabs" parent="UI/Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Bpm" type="SpinBox" parent="UI/Tabs/Section"]
+margin_left = 63.0
+margin_top = 42.0
+margin_right = 161.0
+margin_bottom = 66.0
+min_value = 1.0
+value = 100.0
+allow_greater = true
+
+[node name="Label" type="Label" parent="UI/Tabs/Section/Bpm"]
+margin_left = -53.0
+margin_bottom = 24.0
+text = "Bpm:"
+valign = 1
+
+[node name="Length" type="SpinBox" parent="UI/Tabs/Section"]
+margin_left = 63.0
+margin_top = 8.0
+margin_right = 161.0
+margin_bottom = 32.0
+min_value = 2.0
+max_value = 16.0
+step = 2.0
+value = 16.0
+
+[node name="Label" type="Label" parent="UI/Tabs/Section/Length"]
+margin_left = -55.0
+margin_bottom = 24.0
+text = "Length:"
+valign = 1
+
+[node name="MustHit" type="CheckBox" parent="UI/Tabs/Section"]
+margin_left = 212.0
+margin_top = 8.0
+margin_right = 347.0
+margin_bottom = 32.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Must hit"
+
+[node name="ChangeBpm" type="CheckBox" parent="UI/Tabs/Section"]
+margin_left = 212.0
+margin_top = 32.0
+margin_right = 347.0
+margin_bottom = 56.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Change bpm"
+
+[node name="SectionToCopy" type="SpinBox" parent="UI/Tabs/Section"]
+margin_left = 116.0
+margin_top = 114.0
+margin_right = 190.0
+margin_bottom = 138.0
+min_value = -1.0
+value = -1.0
+allow_greater = true
+
+[node name="Duet" type="Button" parent="UI/Tabs/Section"]
+margin_left = 8.0
+margin_top = 228.0
+margin_right = 101.0
+margin_bottom = 248.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Duet notes"
+
+[node name="Mirror" type="Button" parent="UI/Tabs/Section"]
+margin_left = 8.0
+margin_top = 201.0
+margin_right = 101.0
+margin_bottom = 221.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Mirror notes"
+
+[node name="Copy" type="Button" parent="UI/Tabs/Section"]
+margin_left = 8.0
+margin_top = 116.0
+margin_right = 106.0
+margin_bottom = 136.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Copy section"
+
+[node name="Paste" type="Button" parent="UI/Tabs/Section"]
+margin_left = 8.0
+margin_top = 146.0
+margin_right = 106.0
+margin_bottom = 166.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Paste section"
+
+[node name="Swap" type="Button" parent="UI/Tabs/Section"]
+margin_left = 8.0
+margin_top = 257.0
+margin_right = 101.0
+margin_bottom = 277.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Swap notes"
+
+[node name="Clear" type="Button" parent="UI/Tabs/Section"]
+margin_left = 8.0
+margin_top = 285.0
+margin_right = 101.0
+margin_bottom = 305.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Clear"
+
+[node name="Help" type="Label" parent="UI/Tabs/Section"]
+self_modulate = Color( 1, 1, 1, 0.313726 )
+margin_left = 10.0
+margin_top = 347.0
+margin_right = 226.0
+margin_bottom = 395.0
+text = "[ Ctrl+C ] Copy the current section
+[ Ctrl+V ] Paste the copied section"
+valign = 1
+
+[node name="Note" type="Tabs" parent="UI/Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 24.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Type" type="OptionButton" parent="UI/Tabs/Note"]
+margin_left = 63.0
+margin_top = 8.0
+margin_right = 339.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Label" type="Label" parent="UI/Tabs/Note/Type"]
+margin_left = -53.0
+margin_bottom = 24.0
+text = "Type:"
+valign = 1
+
+[node name="Time" type="SpinBox" parent="UI/Tabs/Note"]
+margin_left = 63.0
+margin_top = 42.0
+margin_right = 170.0
+margin_bottom = 66.0
+allow_greater = true
+
+[node name="Label" type="Label" parent="UI/Tabs/Note/Time"]
+margin_left = -53.0
+margin_bottom = 24.0
+text = "Time:"
+valign = 1
+
+[node name="Length" type="SpinBox" parent="UI/Tabs/Note"]
+margin_left = 63.0
+margin_top = 74.0
+margin_right = 170.0
+margin_bottom = 98.0
+allow_greater = true
+
+[node name="Label" type="Label" parent="UI/Tabs/Note/Length"]
+margin_left = -53.0
+margin_bottom = 24.0
+text = "Length:"
+valign = 1
+
+[node name="Event" type="Tabs" parent="UI/Tabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 24.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Type" type="OptionButton" parent="UI/Tabs/Event"]
+margin_left = 10.0
+margin_top = 8.0
+margin_right = 209.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Arg1" type="LineEdit" parent="UI/Tabs/Event"]
+margin_left = 10.0
+margin_top = 66.0
+margin_right = 165.0
+margin_bottom = 90.0
+placeholder_text = "..."
+
+[node name="Label" type="Label" parent="UI/Tabs/Event/Arg1"]
+margin_top = -25.0
+margin_right = 53.0
+margin_bottom = -1.0
+text = "Argument 1:"
+valign = 1
+
+[node name="Arg2" type="LineEdit" parent="UI/Tabs/Event"]
+margin_left = 182.0
+margin_top = 66.0
+margin_right = 339.0
+margin_bottom = 90.0
+placeholder_text = "..."
+
+[node name="Label" type="Label" parent="UI/Tabs/Event/Arg2"]
+margin_top = -25.0
+margin_right = 53.0
+margin_bottom = -1.0
+text = "Argument 2:"
+valign = 1
+
+[node name="Add" type="Button" parent="UI/Tabs/Event"]
+margin_left = 245.0
+margin_top = 8.0
+margin_right = 267.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "+"
+
+[node name="Remove" type="Button" parent="UI/Tabs/Event"]
+margin_left = 217.0
+margin_top = 8.0
+margin_right = 239.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "-"
+
+[node name="PagePrev" type="Button" parent="UI/Tabs/Event"]
+margin_left = 289.0
+margin_top = 8.0
+margin_right = 311.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "<"
+
+[node name="PageNext" type="Button" parent="UI/Tabs/Event"]
+margin_left = 317.0
+margin_top = 8.0
+margin_right = 339.0
+margin_bottom = 28.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = ">"
+
+[node name="Manual" type="Panel" parent="UI/Tabs/Event"]
+self_modulate = Color( 1, 1, 1, 0.705882 )
+margin_left = 10.0
+margin_top = 101.0
+margin_right = 339.0
+margin_bottom = 368.0
+
+[node name="Label" type="Label" parent="UI/Tabs/Event/Manual"]
+self_modulate = Color( 1, 1, 1, 0.498039 )
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 324.0
+margin_bottom = 261.0
+text = "..."
+autowrap = true
+
+[node name="SlotLabel" type="Label" parent="UI/Tabs/Event"]
+margin_left = 10.0
+margin_top = 372.0
+margin_right = 339.0
+margin_bottom = 396.0
+text = "0 / 0"
+valign = 1
+
+[node name="ToggleTabs" type="Button" parent="UI"]
+margin_left = 1252.0
+margin_top = 7.0
+margin_right = 1274.0
+margin_bottom = 27.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "x"
+
+[node name="ConductorLabel" type="Label" parent="UI"]
+margin_left = 36.0
+margin_top = 27.0
+margin_right = 1239.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 5 )
+text = "0.0 / 0.0
+Section: 0"
+align = 2
+autowrap = true
+
+[node name="BG" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Inst" type="AudioStreamPlayer" parent="."]
+
+[node name="Voices" type="AudioStreamPlayer" parent="."]
+
+[node name="Camera" parent="." instance=ExtResource( 4 )]
+position = Vector2( 640, 360 )
+
+[node name="Icons" type="Node2D" parent="."]
+
+[node name="Event" type="Sprite" parent="Icons"]
+
+[node name="Bf" type="Sprite" parent="Icons"]
+
+[node name="Dad" type="Sprite" parent="Icons"]
+
+[connection signal="pressed" from="UI/Tabs/Song/Save" to="." method="save_song"]
+[connection signal="pressed" from="UI/Tabs/Song/Load" to="." method="load_song"]
+[connection signal="value_changed" from="UI/Tabs/Song/Speed" to="." method="on_song_speed_changed"]
+[connection signal="value_changed" from="UI/Tabs/Section/Bpm" to="." method="on_section_bpm_changed"]
+[connection signal="value_changed" from="UI/Tabs/Section/Length" to="." method="on_section_length_changed"]
+[connection signal="toggled" from="UI/Tabs/Section/MustHit" to="." method="on_section_musthit_toggled"]
+[connection signal="toggled" from="UI/Tabs/Section/ChangeBpm" to="." method="on_section_changebpm_toggled"]
+[connection signal="pressed" from="UI/Tabs/Section/Duet" to="." method="duet_section_notes"]
+[connection signal="pressed" from="UI/Tabs/Section/Mirror" to="." method="mirror_section_notes"]
+[connection signal="pressed" from="UI/Tabs/Section/Copy" to="." method="copy_section_notes"]
+[connection signal="pressed" from="UI/Tabs/Section/Paste" to="." method="paste_section_notes"]
+[connection signal="pressed" from="UI/Tabs/Section/Swap" to="." method="swap_section_notes"]
+[connection signal="pressed" from="UI/Tabs/Section/Clear" to="." method="clear_section"]
+[connection signal="item_selected" from="UI/Tabs/Note/Type" to="." method="on_note_type_selected"]
+[connection signal="value_changed" from="UI/Tabs/Note/Time" to="." method="on_note_time_changed"]
+[connection signal="value_changed" from="UI/Tabs/Note/Length" to="." method="on_note_length_changed"]
+[connection signal="item_selected" from="UI/Tabs/Event/Type" to="." method="on_event_type_selected"]
+[connection signal="text_changed" from="UI/Tabs/Event/Arg1" to="." method="on_event_arg1_changed"]
+[connection signal="text_changed" from="UI/Tabs/Event/Arg2" to="." method="on_event_arg2_changed"]
+[connection signal="pressed" from="UI/Tabs/Event/Add" to="." method="add_subevent"]
+[connection signal="pressed" from="UI/Tabs/Event/Remove" to="." method="remove_subevent"]
+[connection signal="pressed" from="UI/Tabs/Event/PagePrev" to="." method="on_event_page_prev"]
+[connection signal="pressed" from="UI/Tabs/Event/PageNext" to="." method="on_event_page_next"]
+[connection signal="pressed" from="UI/ToggleTabs" to="." method="on_toggletabs_pressed"]

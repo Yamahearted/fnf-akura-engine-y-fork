@@ -1,0 +1,60 @@
+{
+    "animations": {
+        "confirm": {
+            "framerate": 24,
+            "loop": false,
+            "name": "confirm",
+            "offset": {
+                "x": -239,
+                "y": -435
+            },
+            "play_next": "",
+            "prefix": "BF Dead confirm0",
+            "reset_at_beat": false
+        },
+        "dies": {
+            "framerate": 24,
+            "loop": false,
+            "name": "dies",
+            "offset": {
+                "x": -239,
+                "y": -377
+            },
+            "play_next": "idle-1",
+            "prefix": "BF dies0",
+            "reset_at_beat": false
+        },
+        "idle-1": {
+            "framerate": 24,
+            "loop": false,
+            "name": "idle-1",
+            "offset": {
+                "x": -239,
+                "y": -371
+            },
+            "play_next": "",
+            "prefix": "BF Dead Loop0",
+            "reset_at_beat": true
+        },
+        "idle-2": {
+            "framerate": 24,
+            "loop": false,
+            "name": "idle-2",
+            "offset": {
+                "x": -239,
+                "y": -371
+            },
+            "play_next": "",
+            "prefix": "BF Dead Loop1 0",
+            "reset_at_beat": true
+        }
+    },
+    "camera_offset":{"x":0,"y":-160},
+    "autoplay": "dies",
+    "flip": false,
+    "hp_color": "ffffff",
+    "icon": "",
+    "imageatlas": "actors/boyfriend-dead",
+    "name": "bf-dead",
+    "sing_len": 0
+}

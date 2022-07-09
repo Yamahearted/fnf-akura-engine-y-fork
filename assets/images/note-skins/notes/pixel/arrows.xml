@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="arrows.png"><SubTexture name=" 0 arrow0000" x="0" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 arrow 10000" x="17" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 arrow 10000" x="0" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 arrow 10000" x="17" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 press 10000" x="34" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 press 10001" x="34" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 press 10002" x="34" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 press 10003" x="34" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 press 10000" x="34" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 press 10001" x="34" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 press 10002" x="34" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 press 10003" x="34" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 press 10000" x="0" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 press 10001" x="0" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 press 10002" x="0" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 press 10003" x="0" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 press 10000" x="17" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 press 10001" x="17" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 press 10002" x="17" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 press 10003" x="17" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 confirm 10000" x="34" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 confirm 10000" x="51" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 confirm 10000" x="51" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 confirm 10000" x="51" y="34" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 confirm 10001" x="51" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 confirm 10002" x="51" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 confirm 10003" x="51" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 arrow 10001" x="0" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 confirm 10001" x="0" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 confirm 10001" x="17" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 confirm 10002" x="17" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 confirm 10003" x="17" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 confirm 10001" x="34" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 confirm 10002" x="34" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 confirm 10003" x="34" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 confirm 10001" x="51" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 confirm 10002" x="51" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 confirm 10003" x="51" y="51" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+</TextureAtlas>

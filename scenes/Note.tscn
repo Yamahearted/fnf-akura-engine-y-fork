@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Note.gd" type="Script" id=2]
+[ext_resource path="res://scripts/AnimatedAtlas.gd" type="Script" id=3]
+
+[node name="Note" type="Sprite"]
+script = ExtResource( 2 )
+
+[node name="Slider" type="Node2D" parent="."]
+
+[node name="Middle" type="Sprite" parent="Slider"]
+centered = false
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="End" type="Sprite" parent="Slider"]
+centered = false
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}

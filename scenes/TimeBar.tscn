@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/fonts/vcr.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/images/ui-skins/base/timebar.png" type="Texture" id=2]
+[ext_resource path="res://scripts/TimeBar.gd" type="Script" id=3]
+
+[node name="TimeBar" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Base" type="Node2D" parent="."]
+
+[node name="Right" type="Sprite" parent="Base"]
+modulate = Color( 1, 0.0588235, 0.321569, 1 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -0.376862, 0, 412.377, 19 )
+
+[node name="Left" type="Sprite" parent="Base"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 206, 19 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = -1.0
+margin_right = 412.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 1 )
+text = "0:00"
+align = 1
+valign = 1

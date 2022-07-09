@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bf-retry.ogg-7169151e3a7913d6ff0011001f5fbea5.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/bf-retry.ogg"
+dest_files=[ "res://.import/bf-retry.ogg-7169151e3a7913d6ff0011001f5fbea5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

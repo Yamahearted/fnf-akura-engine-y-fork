@@ -1,0 +1,144 @@
+{
+    "animations": {
+        "idle": {
+            "framerate": 24,
+            "loop": false,
+            "name": "idle",
+            "offset": {
+                "x": -215,
+                "y": -366
+            },
+            "reset_at_beat":true,
+            "play_next": "",
+            "prefix": "BF idle dance0"
+        },
+        "idle-shaking": {
+            "framerate": 24,
+            "loop": false,
+            "name": "idle-shaking",
+            "offset": {
+                "x": -216,
+                "y": -366
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF idle shaking0"
+        },
+        "miss-down": {
+            "framerate": 24,
+            "loop": false,
+            "name": "miss-down",
+            "offset": {
+                "x": -204,
+                "y": -337
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE DOWN MISS0"
+        },
+        "miss-left": {
+            "framerate": 24,
+            "loop": false,
+            "name": "miss-left",
+            "offset": {
+                "x": -222,
+                "y": -383
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE LEFT MISS0"
+        },
+        "miss-right": {
+            "framerate": 24,
+            "loop": false,
+            "name": "miss-right",
+            "offset": {
+                "x": -180,
+                "y": -384
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE RIGHT MISS0"
+        },
+        "miss-up": {
+            "framerate": 24,
+            "loop": false,
+            "name": "miss-up",
+            "offset": {
+                "x": -180,
+                "y": -392
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE UP MISS0"
+        },
+        "sing-down": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-down",
+            "offset": {
+                "x": -199,
+                "y": -312
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE DOWN0"
+        },
+        "sing-left": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-left",
+            "offset": {
+                "x": -228,
+                "y": -357
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE LEFT0"
+        },
+        "sing-right": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-right",
+            "offset": {
+                "x": -174,
+                "y": -358
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE RIGHT0"
+        },
+        "sing-up": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-up",
+            "offset": {
+                "x": -174,
+                "y": -399
+            },
+            "reset_at_beat":false,
+            "play_next": "idle",
+            "prefix": "BF NOTE UP0"
+        },
+        "taunt-hey": {
+            "framerate": 24,
+            "loop": false,
+            "name": "taunt-hey",
+            "offset": {
+                "x": -216,
+                "y": -371
+            },
+            "play_next": "idle",
+            "prefix": "BF HEY!!0",
+            "reset_at_beat":false
+        }
+    },
+    "camera_offset":{"x":0,"y":-160},
+    "autoplay": "idle",
+    "flip": false,
+    "hp_color": "31b0d1",
+    "icon": "bf",
+    "imageatlas": "actors/boyfriend",
+    "name": "bf",
+    "sing_len": 3
+}

@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/Gameplay.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Strums.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/PauseMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Countdown.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Combo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/TimeBar.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/HealthBar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=11]
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+offset = Vector2( 640, 360 )
+transform = Transform2D( 1, 0, 0, 1, 640, 360 )
+
+[node name="Strums" type="Node2D" parent="UI"]
+
+[node name="0" parent="UI/Strums" instance=ExtResource( 2 )]
+position = Vector2( -416, -1 )
+
+[node name="1" parent="UI/Strums" instance=ExtResource( 2 )]
+
+[node name="Combo" parent="UI" instance=ExtResource( 7 )]
+position = Vector2( 25, -238 )
+
+[node name="HealthBar" parent="UI" instance=ExtResource( 10 )]
+position = Vector2( -302, -281 )
+
+[node name="TimeBar" parent="UI" instance=ExtResource( 8 )]
+position = Vector2( -206, 323 )
+
+[node name="Countdown" parent="UI" instance=ExtResource( 6 )]
+
+[node name="PauseMenu" parent="." instance=ExtResource( 5 )]
+layer = 2
+
+[node name="Inst" type="AudioStreamPlayer" parent="."]
+
+[node name="Voices" type="AudioStreamPlayer" parent="."]
+
+[node name="Camera" parent="." instance=ExtResource( 11 )]
+position = Vector2( 640, 360 )

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="notes.png"><SubTexture name=" purple0000" x="0" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="0 0000" x="0" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="1 0000" x="17" y="0" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="2 0000" x="0" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+<SubTexture name="3 0000" x="17" y="17" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+</TextureAtlas>

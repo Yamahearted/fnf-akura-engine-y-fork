@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/ModsMenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/menubg-magenta.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Alphabet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/AnimatedAtlas.gd" type="Script" id=4]
+
+[node name="ModsMenu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BG" type="Sprite" parent="."]
+modulate = Color( 0.321569, 0.588235, 0.764706, 1 )
+scale = Vector2( 0.995334, 0.986301 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+position = Vector2( 153, 26 )
+scale = Vector2( 0.6, 0.6 )
+text = "/b select the mod you want to load"
+
+[node name="PressEnter" parent="." instance=ExtResource( 3 )]
+position = Vector2( 284, 92 )
+scale = Vector2( 0.3, 0.3 )
+text = "/b Press enter to confirm or Press ESC to go back"
+
+[node name="PressShift" parent="." instance=ExtResource( 3 )]
+position = Vector2( 347, 123 )
+scale = Vector2( 0.24, 0.24 )
+text = "/b Press shift to reset your game back to vanilla"
+
+[node name="NoModsTitle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 375, 239 )
+scale = Vector2( 0.8, 0.8 )
+text = "/b/f2 no mods found"
+
+[node name="NoModsPressEnter" parent="." instance=ExtResource( 3 )]
+position = Vector2( 241, 348 )
+scale = Vector2( 0.3, 0.3 )
+text = "/b press enter to open the mods folder or esc to leave"
+
+[node name="ArrowLeft" type="Sprite" parent="."]
+position = Vector2( 102, 69 )
+scale = Vector2( 0.6, 0.6 )
+centered = false
+script = ExtResource( 4 )
+
+[node name="ArrowRight" type="Sprite" parent="."]
+position = Vector2( 1183, 69 )
+scale = Vector2( 0.6, 0.6 )
+centered = false
+script = ExtResource( 4 )
+
+[node name="Mods" type="Node2D" parent="."]
+position = Vector2( 56, 177 )

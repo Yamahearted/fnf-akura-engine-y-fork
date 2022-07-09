@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<TextureAtlas imagePath="sliders.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="1 hold end instance 10000" x="0" y="0" width="51" height="64"/>
+	<SubTexture name="1 hold piece instance 10000" x="51" y="0" width="51" height="44"/>
+	<SubTexture name="2 hold end instance 10000" x="0" y="64" width="51" height="64"/>
+	<SubTexture name="2 hold piece instance 10000" x="51" y="64" width="51" height="44"/>
+	<SubTexture name="0 hold end instance 10000" x="0" y="128" width="51" height="64"/>
+	<SubTexture name="0 hold piece instance 10000" x="51" y="128" width="51" height="44"/>
+	<SubTexture name="3 hold end instance 10000" x="0" y="192" width="51" height="64"/>
+	<SubTexture name="3 hold piece instance 10000" x="51" y="192" width="51" height="44"/>
+</TextureAtlas>

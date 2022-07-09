@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bf-dies.mp3-0f00e77655b75e1d7d49c623a4ad6e1c.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/bf-dies.mp3"
+dest_files=[ "res://.import/bf-dies.mp3-0f00e77655b75e1d7d49c623a4ad6e1c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

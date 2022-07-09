@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/intro-go-pixel.ogg-e4c89f998fe62240119790f79766ede2.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/intro-go-pixel.ogg"
+dest_files=[ "res://.import/intro-go-pixel.ogg-e4c89f998fe62240119790f79766ede2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

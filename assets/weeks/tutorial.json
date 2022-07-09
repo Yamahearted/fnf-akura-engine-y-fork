@@ -1,0 +1,26 @@
+{
+    "title":"?",
+    "logo":"tutorial",
+    "bg":"",
+    "name":"tutorial",
+    "storymode_color":"f9cf51",
+    "hide_from_story_mode":false,
+    "songs":[
+        {
+            "name":"tutorial",
+            "icon":"gf",
+            "color":"B72863",
+            "show_on_storymode":true
+        }
+    ],
+    "actors":[
+        ["",0,0,0,0,false],
+        ["gf",650,420,0,0.5,false],
+        ["bf",860,410,1,0.55,false]
+    ],
+    "difficulties":[
+        "easy",
+        "normal",
+        "hard"
+    ] 
+}   
