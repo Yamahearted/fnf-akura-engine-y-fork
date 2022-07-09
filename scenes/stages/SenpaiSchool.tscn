@@ -13,8 +13,8 @@
 [node name="SenpaiSchool" instance=ExtResource( 1 )]
 script = ExtResource( 5 )
 bf = Vector3( 200, 130, 4 )
-gf = Vector3( 150, 125, 4 )
-dad = Vector3( 100, 130, 4 )
+gf = Vector3( 165, 125, 4 )
+dad = Vector3( 120, 130, 4 )
 camera_start = Vector2( 150, 80 )
 camera_zoom = Vector2( 0.18, 0.18 )
 

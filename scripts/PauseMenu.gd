@@ -37,6 +37,8 @@ func _ready():
 	for i in options_text.size():
 		var option=ALPHABET.instance()
 		option.text="/b"+options_text[i]
+		option.position.x=i*45
+		option.position.y=i*130
 		option.modulate=Color.darkgray*0.5
 		option.modulate.a=1.0
 		options.add_child(option)
@@ -162,18 +164,16 @@ func on_option_changed(change:int=0):
 	if cur_option!=old_option:
 		SoundManager.play("MenuScroll")
 	
-	tween.interpolate_property(options,"position",options.position,Vector2(90-cur_option*40,(720/2)-80-cur_option*130),0.3,Tween.TRANS_CUBIC,Tween.EASE_OUT)
+	tween.interpolate_property(options,"position",options.position,Vector2(90-cur_option*40,(720/2)-80-cur_option*130),0.32,Tween.TRANS_CUBIC,Tween.EASE_OUT)
 			
 	for i in options.get_child_count():
 		var opt=options.get_child(i)
-		var color=Color.white if i==cur_option else (Color.darkgray*0.5)
+		var color=Color.white if i==cur_option else (Color.darkgray*0.8)
 		color.a=1.0
 		if i==cur_option:
 			opt.set_physics_process(true)
 		else:
 			opt.set_physics_process(false)
-		tween.interpolate_property(opt,"position:x",opt.position.x,(i+1)*45 if i==cur_option else (i+1)*40,0.3,Tween.TRANS_CIRC,Tween.EASE_OUT)
-		tween.interpolate_property(opt,"position:y",opt.position.y,(i+1)*130,0.3,Tween.TRANS_CIRC,Tween.EASE_OUT)
 		tween.interpolate_property(opt,"modulate",opt.modulate,color,0.3,Tween.TRANS_CUBIC,Tween.EASE_OUT)
 	
 	tween.start()

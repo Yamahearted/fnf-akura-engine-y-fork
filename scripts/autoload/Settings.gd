@@ -67,6 +67,8 @@ var animate_enemy_arrows:bool=false
 var disable_blueballed_button:bool=false
 var move_camera_with_actor:bool=false
 
+var blackbars_pixelui:bool=true
+
 var mod:String=""
 var allow_mods:bool=true
 

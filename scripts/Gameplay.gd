@@ -43,7 +43,10 @@ func _ready():
 	
 	match Globals.ui_skin:
 		"pixel":
-			aspect_ratio_bars.show()
+			if Settings.blackbars_pixelui:
+				aspect_ratio_bars.show()
+			else:
+				aspect_ratio_bars.hide()
 		_:
 			aspect_ratio_bars.hide()
 	
@@ -162,14 +165,15 @@ func _ready():
 		for i in Ref.strums[1].get_arrows().size():
 			var arrow=Ref.strums[1].get_arrows()[i]
 			if i>1:
-				arrow.position.x+=960-(240 if Globals.ui_skin=="pixel" else 0)
+				arrow.position.x+=960-(240 if Globals.ui_skin=="pixel" and Settings.blackbars_pixelui else 0)
 	
 	if Globals.ui_skin=="pixel":
-		if not Settings.middle_scroll:
-			Ref.strums[1].position.x+=80
-			Ref.strums[0].position.x-=80
-		else:
-			Ref.strums[1].position.x+=90
+		if Settings.blackbars_pixelui:
+			if not Settings.middle_scroll:
+				Ref.strums[1].position.x+=80
+				Ref.strums[0].position.x-=80
+			else:
+				Ref.strums[1].position.x+=90
 		
 	if Settings.hide_ui:
 		Ref.combo.hide()

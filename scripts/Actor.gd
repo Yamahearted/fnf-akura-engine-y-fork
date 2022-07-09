@@ -48,10 +48,13 @@ func set_actor(actor_name="bf"):
 		if animations[i].reset_at_beat:
 			animations[i].speed=0.0
 	
+	if actor=="senpai-pixel":
+		bump_at=2
+	
 	if Settings.ultra_performance:
 		texture=null
-		region_enabled=false
-		region_rect=Rect2()
+		#region_enabled=false
+		#region_rect=Rect2()
 		set_physics_process(false)
 		hide()
 			
