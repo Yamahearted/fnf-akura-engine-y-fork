@@ -63,15 +63,15 @@ func get_song_list():
 	return get_content_in_folder("res://assets/songs/")
 
 func get_actor_icon(actor_name:String):
-	if len(actor_name)!=0:
-		var data:Dictionary=get_actor_data(actor_name)
-		var path="res://assets/images/icons/%s.png"%[data.icon]
-		data.clear()
-		if file_exists(path):
-			return load(path)
-		return null
+	var actor_path:String="res://assets/actors/%s"%[actor_name]
+	var data=get_actor_data(actor_name)
+	if data!=null:
+		if not data.empty():
+			var path="res://assets/images/icons/%s.png"%[data.icon]
+			data.clear()
+			return ResourceLoader.load(path) if ResourceLoader.exists(path) else null
 	return null
-
+	
 func get_event_list():
 	var list=get_content_in_folder("res://scripts/events/")
 	for i in list.size():

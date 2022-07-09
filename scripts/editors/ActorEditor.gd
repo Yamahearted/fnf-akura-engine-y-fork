@@ -171,6 +171,10 @@ func save_actor():
 func load_actor():
 	var path="res://assets/actors/"+menu.actor.name.text+".json"
 	
+	if not Globals.file_exists(path):
+		printt(path,"doesn't exists")
+		return		
+		
 	var f=File.new()
 	var data={}
 	f.open(path,File.READ)
