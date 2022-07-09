@@ -70,6 +70,10 @@ func _process(delta):
 		int(Input.is_action_just_pressed("ui_down"))-int(Input.is_action_just_pressed("ui_up"))
 	)
 
+	if Input.is_action_just_pressed("ui_reset"):
+		actor.animations[actor.animation].offset=Vector2(0,0)
+		ghost.animations[ghost.animation].offset=Vector2(0,0)
+	
 	if offset_input.length()!=0:
 		var input_spd=12 if Input.is_action_pressed("ui_shift") else 1
 		if !actor.atlas.empty() and !actor.animations.empty():
