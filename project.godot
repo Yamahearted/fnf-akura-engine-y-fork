@@ -29,17 +29,23 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/Song.gd"
 }, {
-"base": "ParallaxBackground",
+"base": "Node2D",
 "class": "Stage",
 "language": "GDScript",
 "path": "res://scripts/stages/Stage.gd"
+}, {
+"base": "Node2D",
+"class": "StageLayer",
+"language": "GDScript",
+"path": "res://scripts/StageLayer.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
 "AnimatedAtlas": "",
 "SongEvent": "",
 "SongScript": "",
-"Stage": ""
+"Stage": "",
+"StageLayer": ""
 }
 
 [application]
@@ -176,5 +182,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 environment/default_environment="res://default_env.tres"

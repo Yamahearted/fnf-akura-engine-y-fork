@@ -11,31 +11,20 @@
 [ext_resource path="res://assets/images/stages/senpai-school/trees-back.png" type="Texture" id=9]
 
 [node name="SenpaiSchool" instance=ExtResource( 1 )]
-follow_viewport_scale = 6.0
 script = ExtResource( 5 )
-bf = Vector3( 70, 90, 4 )
-gf = Vector3( 0, 85, 4 )
-dad = Vector3( -80, 90, 4 )
-camera_start = Vector2( 0, 30 )
-
-[node name="0" parent="." index="0"]
-motion_scale = Vector2( 0.3, 0.3 )
-motion_offset = Vector2( -800, -450 )
+bf = Vector3( 200, 130, 4 )
+gf = Vector3( 150, 125, 4 )
+dad = Vector3( 100, 130, 4 )
+camera_start = Vector2( 150, 80 )
+camera_zoom = Vector2( 0.18, 0.18 )
 
 [node name="Sky" type="Sprite" parent="0" index="0"]
 texture = ExtResource( 2 )
 centered = false
 
-[node name="1" parent="." index="1"]
-motion_scale = Vector2( 0.6, 0.6 )
-motion_offset = Vector2( -800, -400 )
-
 [node name="School" type="Sprite" parent="1" index="0"]
 texture = ExtResource( 3 )
 centered = false
-
-[node name="2" parent="." index="2"]
-motion_offset = Vector2( -800, -400 )
 
 [node name="Street" type="Sprite" parent="2" index="0"]
 texture = ExtResource( 4 )
@@ -53,12 +42,8 @@ position = Vector2( 0.25, 0 )
 texture = ExtResource( 7 )
 centered = false
 
-[node name="3" parent="." index="3"]
-motion_offset = Vector2( -750, -340 )
-
 [node name="Girls" type="Sprite" parent="3" index="0"]
-scale = Vector2( 0.6, 0.6 )
+position = Vector2( -25, 43 )
+scale = Vector2( 0.8, 0.8 )
 centered = false
 script = ExtResource( 6 )
-
-[node name="4" type="ParallaxLayer" parent="." index="4"]

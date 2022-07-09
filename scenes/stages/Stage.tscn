@@ -6,13 +6,10 @@
 [ext_resource path="res://assets/images/stages/stage/front.png" type="Texture" id=4]
 
 [node name="Stage" instance=ExtResource( 1 )]
-bf = Vector3( 1700, 620, 2 )
-gf = Vector3( 1280, 600, 1 )
-dad = Vector3( 1000, 620, 2 )
+bf = Vector3( 960, 560, 2 )
+gf = Vector3( 730, 542, 1 )
+dad = Vector3( 320, 560, 2 )
 camera_start = Vector2( 640, 180 )
-
-[node name="0" parent="." index="0"]
-motion_offset = Vector2( 0, -240 )
 
 [node name="Back" type="Sprite" parent="0" index="0"]
 position = Vector2( -573, -367 )
@@ -20,23 +17,16 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="1" parent="." index="1"]
-motion_scale = Vector2( 0.9, 1 )
-motion_offset = Vector2( 0, -300 )
-
 [node name="Front" type="Sprite" parent="1" index="0"]
 position = Vector2( 697, 723 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
-[node name="2" parent="." index="2"]
-motion_offset = Vector2( 200, 0 )
-
 [node name="3" parent="." index="3"]
-motion_scale = Vector2( 1.2, 1.2 )
-motion_offset = Vector2( 150, -240 )
+factor = Vector2( 1.1, 1.1 )
+offset = Vector2( -720, -380 )
 
 [node name="Curtains" type="Sprite" parent="3" index="0"]
 position = Vector2( 702, 335 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 3 )

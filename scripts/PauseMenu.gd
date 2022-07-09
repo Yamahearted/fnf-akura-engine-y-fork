@@ -168,6 +168,10 @@ func on_option_changed(change:int=0):
 		var opt=options.get_child(i)
 		var color=Color.white if i==cur_option else (Color.darkgray*0.5)
 		color.a=1.0
+		if i==cur_option:
+			opt.set_physics_process(true)
+		else:
+			opt.set_physics_process(false)
 		tween.interpolate_property(opt,"position:x",opt.position.x,(i+1)*45 if i==cur_option else (i+1)*40,0.3,Tween.TRANS_CIRC,Tween.EASE_OUT)
 		tween.interpolate_property(opt,"position:y",opt.position.y,(i+1)*130,0.3,Tween.TRANS_CIRC,Tween.EASE_OUT)
 		tween.interpolate_property(opt,"modulate",opt.modulate,color,0.3,Tween.TRANS_CUBIC,Tween.EASE_OUT)
