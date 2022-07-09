@@ -72,8 +72,8 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("ui_reset"):
 		actor.animations[actor.animation].offset=Vector2(0,0)
-		ghost.animations[ghost.animation].offset=Vector2(0,0)
-	
+		update_ghost()
+		
 	if offset_input.length()!=0:
 		var input_spd=12 if Input.is_action_pressed("ui_shift") else 1
 		if !actor.atlas.empty() and !actor.animations.empty():
@@ -84,10 +84,7 @@ func _process(delta):
 		SceneManager.change_to(Ref.previous_scene_name)
 	
 	if Input.is_action_just_pressed("ui_tab"):
-		ghost.animations=actor.animations.duplicate(true)
-		ghost.animation=actor.animation
-		ghost.animations[ghost.animation].offset=actor.animations[actor.animation].offset
-		ghost.seek_animation(actor.animation,0)
+		update_ghost()
 	
 	if actor.flip_x!=menu.actor.flip.pressed:
 		actor.flip_x=menu.actor.flip.pressed
@@ -207,6 +204,12 @@ func load_actor():
 	on_actor_animation_changed()
 	
 	printt("Actor Loaded!","actors/"+data.name)
+
+func update_ghost():
+	ghost.animations=actor.animations.duplicate(true)
+	ghost.animation=actor.animation
+	ghost.animations[ghost.animation].offset=actor.animations[actor.animation].offset
+	ghost.seek_animation(actor.animation,0)
 
 func import_imageatlas():
 	menu.animations.prefixes.clear()
