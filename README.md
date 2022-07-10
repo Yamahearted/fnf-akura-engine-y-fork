@@ -30,6 +30,7 @@ now open your game, go to mods, and you'll probably see something like this.
 
 
 
-##Credits
+## Credits
 Friday Night Funkin' - ninja_muffin99, PhantomArcade3k evilsk8r, kawaisprite
+
 Recreation/Engine - Aküra
