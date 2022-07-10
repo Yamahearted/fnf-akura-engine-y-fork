@@ -10,6 +10,7 @@ bf = Vector3( 960, 560, 2 )
 gf = Vector3( 730, 542, 1 )
 dad = Vector3( 320, 560, 2 )
 camera_start = Vector2( 640, 180 )
+camera_zoom = Vector2( 1.1, 1.1 )
 
 [node name="Back" type="Sprite" parent="0" index="0"]
 position = Vector2( -573, -367 )

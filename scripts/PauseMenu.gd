@@ -16,6 +16,7 @@ onready var options=$"Options"
 
 onready var song_label=$"Song"
 onready var diff_label=$"Difficulty"
+onready var scene_image=$"SceneImage"
 
 func _ready():
 	add_child(tween)
@@ -100,8 +101,10 @@ func pause_game():
 
 func unpause_game():
 	SoundManager.stop("Musics/Breakfast")
+	Ref.stage.call("show")
 	get_tree().paused=false
 	is_paused=false
+	scene_image.texture=null
 	fade_out()
 	for i in options.get_children():
 		i.set_physics_process(false)
@@ -112,7 +115,6 @@ func on_option_pressed():
 		"resume":
 			unpause_game()
 			fade_out()
-			#unpause_game()
 		"restart song":
 			SoundManager.stop("Musics/Breakfast")
 			SceneManager.restart()

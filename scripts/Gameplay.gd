@@ -14,6 +14,8 @@ var song_ended:bool=false
 var cur_section:int=0
 var tween:=Tween.new()
 
+var created_notes:Array=[]
+
 onready var ui=$"UI"
 onready var inst=$"Inst"
 onready var voices=$"Voices"
@@ -202,7 +204,18 @@ func _ready():
 	
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_pause") and pause_menu.can_pause and not pause_menu.is_paused and pause_menu.pause_delay==0:
+		var old_clear_mode=get_viewport().get_clear_mode()
+		get_viewport().set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
+		yield(get_tree(),"idle_frame")
+		yield(get_tree(),"idle_frame")
+		var img:=get_viewport().get_texture().get_data()
+		get_viewport().set_clear_mode(old_clear_mode)
+		img.flip_y()
+		var tex:=ImageTexture.new()
+		tex.create_from_image(img)
+		pause_menu.scene_image.texture=tex
 		pause_menu.call("pause_game")
+		Ref.stage.call("hide")
 	
 	if chart.empty():
 		return
