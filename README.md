@@ -19,7 +19,11 @@ package.json is the data like, name, description.
 screenshorts/ is a folder to place images of your mod, so it can be shown at the mods menu.
 mod.pck is the file you just exported from godot.
 
-now, to play it, you'll need a builded version of the game, that you can find here on the releases.
+# Package.json
+![image](https://user-images.githubusercontent.com/89349204/178160380-1f16f9e3-718b-432b-a5c2-56c2e6b4d6c1.png)
+
+# Conclusion
+Now to play it, you'll need a builded version of the game, that you can find here on the releases.
 open the game once, so the /appdata folders can be created.
 
 put the mod folder you created inside of /appdata/roaming/akura-engine/mods
