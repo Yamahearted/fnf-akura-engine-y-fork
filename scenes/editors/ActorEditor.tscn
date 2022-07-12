@@ -111,10 +111,10 @@ text = "Icon:"
 valign = 1
 
 [node name="HpColor" type="ColorPickerButton" parent="UI/Tabs/Actor"]
-margin_left = 96.0
-margin_top = 264.0
-margin_right = 168.0
-margin_bottom = 288.0
+margin_left = 97.0
+margin_top = 294.0
+margin_right = 169.0
+margin_bottom = 318.0
 flat = true
 color = Color( 1, 1, 1, 1 )
 edit_alpha = false
@@ -140,11 +140,28 @@ margin_bottom = 24.0
 text = "Sing length:"
 valign = 1
 
+[node name="BumpAt" type="SpinBox" parent="UI/Tabs/Actor"]
+margin_left = 103.0
+margin_top = 264.0
+margin_right = 177.0
+margin_bottom = 288.0
+min_value = 1.0
+value = 1.0
+allow_greater = true
+
+[node name="Label" type="Label" parent="UI/Tabs/Actor/BumpAt"]
+margin_left = -93.0
+margin_right = -6.0
+margin_bottom = 24.0
+text = "Bump at:"
+valign = 1
+
 [node name="Scale" type="SpinBox" parent="UI/Tabs/Actor"]
 margin_left = 103.0
 margin_top = 234.0
 margin_right = 177.0
 margin_bottom = 258.0
+step = 0.1
 value = 1.0
 allow_greater = true
 

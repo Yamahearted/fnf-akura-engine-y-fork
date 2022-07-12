@@ -1,1 +1,76 @@
-{"animations":{"idle":{"framerate":24,"loop":false,"name":"idle","offset":{"x":-223,"y":-419},"play_next":"","prefix":"Pico Idle Dance0","reset_at_beat":true},"sing-down":{"framerate":24,"loop":false,"name":"sing-down","offset":{"x":-317,"y":-336},"play_next":"idle","prefix":"Pico Down Note0","reset_at_beat":false},"sing-left":{"framerate":24,"loop":false,"name":"sing-left","offset":{"x":-307,"y":-405},"play_next":"idle","prefix":"Pico NOTE LEFT0","reset_at_beat":false},"sing-right":{"framerate":24,"loop":false,"name":"sing-right","offset":{"x":-174,"y":-419},"play_next":"idle","prefix":"Pico Note Right0","reset_at_beat":false},"sing-up":{"framerate":24,"loop":false,"name":"sing-up","offset":{"x":-249,"y":-447},"play_next":"idle","prefix":"pico Up note0","reset_at_beat":false}},"autoplay":"idle","camera_offset":{"x":0,"y":-160},"flip":false,"hp_color":"b7d855","icon":"pico","imageatlas":"actors/pico","name":"pico","sing_len":0}
+{
+    "animations": {
+        "idle": {
+            "framerate": 24,
+            "loop": false,
+            "name": "idle",
+            "offset": {
+                "x": -223,
+                "y": -419
+            },
+            "play_next": "",
+            "prefix": "Pico Idle Dance0",
+            "reset_at_beat": true
+        },
+        "sing-down": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-down",
+            "offset": {
+                "x": -317,
+                "y": -336
+            },
+            "play_next": "idle",
+            "prefix": "Pico Down Note0",
+            "reset_at_beat": false
+        },
+        "sing-left": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-left",
+            "offset": {
+                "x": -307,
+                "y": -405
+            },
+            "play_next": "idle",
+            "prefix": "Pico NOTE LEFT0",
+            "reset_at_beat": false
+        },
+        "sing-right": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-right",
+            "offset": {
+                "x": -174,
+                "y": -419
+            },
+            "play_next": "idle",
+            "prefix": "Pico Note Right0",
+            "reset_at_beat": false
+        },
+        "sing-up": {
+            "framerate": 24,
+            "loop": false,
+            "name": "sing-up",
+            "offset": {
+                "x": -249,
+                "y": -447
+            },
+            "play_next": "idle",
+            "prefix": "pico Up note0",
+            "reset_at_beat": false
+        }
+    },
+    "autoplay": "idle",
+    "camera_offset": {
+        "x": 0,
+        "y": -160
+    },
+    "flip": false,
+    "hp_color": "b7d855",
+    "icon": "pico",
+    "bump_at":2,
+    "imageatlas": "actors/pico",
+    "name": "pico",
+    "sing_len": 0
+}

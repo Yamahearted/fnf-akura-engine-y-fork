@@ -137,6 +137,7 @@
     "autoplay": "idle",
     "flip": false,
     "hp_color": "31b0d1",
+    "bump_at":2,
     "icon": "bf",
     "imageatlas": "actors/boyfriend",
     "name": "bf",

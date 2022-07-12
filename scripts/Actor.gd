@@ -33,6 +33,8 @@ func set_actor(actor_name="bf"):
 		sing_len=data.sing_len
 		camera_offset=Vector2(data.camera_offset.x,data.camera_offset.y)
 		scale=Vector2(data.scale,data.scale) if data.has("scale") else Vector2(1,1)
+		bump_at=data.bump_at if data.has("bump_at") else 1
+		
 		if data.flip:
 			flip()
 		
@@ -47,9 +49,6 @@ func set_actor(actor_name="bf"):
 	for i in animations.keys():
 		if animations[i].reset_at_beat:
 			animations[i].speed=0.0
-	
-	if actor=="senpai-pixel":
-		bump_at=2
 	
 	if Settings.ultra_performance:
 		texture=null

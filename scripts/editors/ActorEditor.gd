@@ -16,7 +16,8 @@ onready var menu={
 		"sing_len":get_node("UI/Tabs/Actor/SingLen"),
 		"flip":get_node("UI/Tabs/Actor/Flip"),
 		"autoplay_name":get_node("UI/Tabs/Actor/AutoplayName"),
-		"scale":get_node("UI/Tabs/Actor/Scale")
+		"scale":get_node("UI/Tabs/Actor/Scale"),
+		"bump_at":get_node("UI/Tabs/Actor/BumpAt")
 	},
 	"animations":{
 		"name":get_node("UI/Tabs/Animations/Name"),
@@ -158,6 +159,7 @@ func save_actor():
 		"hp_color":menu.actor.hp_color.color.to_html(false),
 		"animations":anims_to_save,
 		"camera_offset":camera_offset,
+		"bump_at":menu.actor.bump_at.value,
 		"scale":menu.actor.scale.value
 	}
 	f.open("res://assets/actors/"+menu.actor.name.text+".json",File.WRITE)
@@ -186,6 +188,7 @@ func load_actor():
 	menu.actor.imageatlas_name.text=data.imageatlas
 	menu.actor.hp_color.color=Color(data.hp_color)
 	menu.actor.scale.value=data.scale if data.has("scale") else 1
+	menu.actor.bump_at.value=data.bump_at if data.has("bump_at") else 1
 	camera_offset=data.camera_offset
 	
 	import_imageatlas()
