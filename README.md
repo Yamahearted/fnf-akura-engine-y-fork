@@ -6,7 +6,7 @@ A recreation of the newest popular rhythm game, [Friday Night Funkin'](https://n
 
 
 ## How to make a mod ( non executable way )
-The way it works, it's a little different, if you're curious how godot handles it, [check this documentation(https://docs.godotengine.org/en/stable/tutorials/export/exporting_pcks.html)
+The way it works, it's a little different, if you're curious how godot handles it, [check this documentation](https://docs.godotengine.org/en/stable/tutorials/export/exporting_pcks.html)
 Clone the source, edit it as much as you want on godot, make sure to download the export features, and export the game as .pck
 
 Make a folder in your desktop (whatever), like "mod"
